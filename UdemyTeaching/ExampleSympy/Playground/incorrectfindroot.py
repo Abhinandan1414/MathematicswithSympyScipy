@@ -1,9 +1,20 @@
-'''
-find_root( 7000 == 5000*(1+0.045/12)^n)
-'''
+# Import libraries
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
 
-from sympy import *
 
-n = Symbol("n")
-eq = 7000 - (5000 * (1 +0.045/12)**n)
-print(solve(eq,n))
+# Creating dataset
+x = np.outer(np.linspace(-3, 3, 32), np.ones(32))
+y = x.copy().T # transpose
+z = (np.sin(x **2) + np.cos(y **2) )
+
+# Creating figure
+fig = plt.figure(figsize =(14, 9))
+ax = plt.axes(projection ='3d')
+
+# Creating plot
+ax.plot_surface(x, y, z)
+
+# show plot
+plt.show()

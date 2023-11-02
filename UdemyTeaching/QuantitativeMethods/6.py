@@ -18,6 +18,7 @@ def lessThanOrEqualToFive(number):
         return False
 if __name__ == '__main__':
     print(__doc__)
+    print(*range(1,21))
     space = FiniteSet(*range(1, 21))
     sixAndAbove = []
     fiveOrLess = []

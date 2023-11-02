@@ -2,7 +2,7 @@
 Is numpy random randint is really random?
 Let us visualize
 '''
-from mpl_toolkits import mplot3d
+#from mpl_toolkits import mplot3d
 import numpy as np
 import matplotlib.pyplot as plt
 print(__doc__)

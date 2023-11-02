@@ -7,12 +7,12 @@ Calculations are monthly
 '''
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+#from mpl_toolkits.mplot3d import Axes3D
 def emiFactor(interest,period):
     return ((interest/1200)*(1+interest/1200) ** (period*12))/((1+interest/1200) ** (period*12) -1)
 print(__doc__)
-fig = plt.figure()
-ax = Axes3D(fig)
+#fig = plt.figure()
+ax = plt.axes(projection='3d')
 X = np.arange(4, 10, 1) # Interest rate in percentage
 print(X)
 Y = np.arange(4, 10, 1) # Number of years

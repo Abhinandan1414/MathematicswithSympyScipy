@@ -8,9 +8,9 @@ Input data can be edited in the program
 '''
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-fig = plt.figure()
-ax = Axes3D(fig)
+#from mpl_toolkits.mplot3d import Axes3D
+#fig = plt.figure()
+ax = plt.axes(projection='3d')
 X = np.arange(4, 10, 1)
 print(X)
 Y = np.arange(4, 10, 1)
@@ -25,3 +25,4 @@ print(Z)
 #plt.plot(X,Y,Z)
 ax.plot_surface(X, Y, Z)
 plt.show()
+
