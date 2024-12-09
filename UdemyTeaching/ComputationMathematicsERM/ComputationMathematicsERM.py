@@ -15,7 +15,7 @@ Impapact_probability_matrx = {
 # Creating Datafarme from given dictionary
 df = pd.DataFrame(Impapact_probability_matrx)
 #Display the DataFrame
-print("DataFrame with row and column headers:")
+print('DataFrame with row as impact and column as prabability for risk caharacteristics of Business')
 print(df)
 
 #Converting the DataFrame to a NumPy Matrix
@@ -28,6 +28,7 @@ starting_row_column_value = 2
 #Sliced Impact_likelyhood_matrix containing high impact and high probability values
 
 sliced_impact_probability_matrix = data_frame_to_matrix[starting_row_column_value:,starting_row_column_value:]
+print('Sliced or reduced version of Risk-Impact-Probability Matrix of Business:')
 print(sliced_impact_probability_matrix)
 
 
@@ -46,7 +47,7 @@ Economic_Business_Environment_for_various_micros = {
 # Creating Impact_Weight_Matric
 df = pd.DataFrame(Economic_Business_Environment_for_various_micros)
 #Display the DataFrame
-print("DataFrame with row and column headers:")
+print("DataFrame with row as micro factor and column as macro factor for risk caharacteristics of Business:")
 print(df)
 
 
@@ -58,6 +59,7 @@ data_frame_to_matrix = df.to_numpy()
 starting_row_column_value = 2
 
 sliced_Economic_Business_Environment_for_various_micros_macro = data_frame_to_matrix[starting_row_column_value:,starting_row_column_value:]
+print('Sliced or reduced version of Risk-MicroMacro-Businessix Matrix of Business:')
 print(sliced_Economic_Business_Environment_for_various_micros_macro)
 
 
@@ -73,6 +75,7 @@ sliced_Economic_Business_Environment_for_various_micros_macro_vector = sliced_Ec
 #Now come up with Matrix of Impact_Probability_Matrix * Economic_Business_Environment_for_various_micros
 
 final_impact_probability_micro_macro_matrix = np.outer(sliced_impact_probability_vector,sliced_Economic_Business_Environment_for_various_micros_macro_vector)
+print('Final Matrix comprising of Risk Impact, Risk Probability Micro and Macro of Business for Decision makers to assign contingency and mitigation plans')
 print(final_impact_probability_micro_macro_matrix)
 
-#If needed it can be sliced further. But we should NOT do that.
+#If needed it can be sliced further. But we should NOT do that
